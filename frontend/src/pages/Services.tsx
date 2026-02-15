@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Box, 
-  Typography, 
+  Box,
   Button,
   TextField, 
   Dialog, 
@@ -272,21 +271,6 @@ const Services: React.FC = () => {
     } catch (err) {
       console.error('Error deleting service:', err);
       setError('Failed to delete service. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Handle status change
-  const handleStatusChange = async (id: number, newStatus: string) => {
-    try {
-      setLoading(true);
-      const updatedService = await serviceService.changeServiceStatus(id, newStatus);
-      setServices(services.map(s => s.id === id ? updatedService : s));
-      setError(null);
-    } catch (err) {
-      console.error('Error changing service status:', err);
-      setError('Failed to update service status. Please try again.');
     } finally {
       setLoading(false);
     }

@@ -24,10 +24,10 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 
 // Import services
-import clientService, { Client } from '../services/clientService';
-import serviceService, { Service } from '../services/serviceService';
-import opportunityService, { Opportunity } from '../services/opportunityService';
-import taskService, { TaskStats, TaskWithDetails } from '../services/taskService';
+import clientService from '../services/clientService';
+import serviceService from '../services/serviceService';
+import opportunityService from '../services/opportunityService';
+import taskService, { TaskWithDetails } from '../services/taskService';
 
 // Define types for dashboard stats
 interface DashboardStats {

@@ -131,13 +131,13 @@ npm install
 npm start           # Starts on http://localhost:3000
 ```
 
-### Test Credentials
-| Role              | Email                   | Password |
-|-------------------|-------------------------|----------|
-| Admin             | admin@wondrlab.com      | password |
-| Sales             | sarah@wondrlab.com      | password |
-| BU Head           | michael@wondrlab.com    | password |
-| Senior Management | emily@wondrlab.com      | password |
+### Test Credentials (all passwords: `password123`)
+| Role              | Email                              |
+|-------------------|------------------------------------|
+| Admin             | admin@wondrlab.com                 |
+| Sales             | sales1@wondrlab.com - sales5@wondrlab.com |
+| BU Head           | buhead_creative@wondrlab.com, buhead_digitalmarketing@wondrlab.com, etc. |
+| Senior Management | manager1@wondrlab.com - manager3@wondrlab.com |
 
 ## Development Commands
 

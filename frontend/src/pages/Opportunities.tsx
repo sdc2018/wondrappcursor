@@ -35,7 +35,6 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import SearchIcon from '@mui/icons-material/Search';
-import SortIcon from '@mui/icons-material/Sort';
 import InputAdornment from '@mui/material/InputAdornment';
 import TableSortLabel from '@mui/material/TableSortLabel';
 

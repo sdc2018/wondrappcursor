@@ -164,11 +164,11 @@ npm run seed:clear
 ## Usage Instructions
 
 ### Login
-- Use the following test credentials:
-  - Admin: admin@wondrlab.com / password
-  - Sales: sarah@wondrlab.com / password
-  - BU Head: michael@wondrlab.com / password
-  - Senior Management: emily@wondrlab.com / password
+- Use the following test credentials (password for all: `password123`):
+  - Admin: admin@wondrlab.com
+  - Sales: sales1@wondrlab.com through sales5@wondrlab.com
+  - BU Head: buhead_creative@wondrlab.com, buhead_digitalmarketing@wondrlab.com, buhead_contentproduction@wondrlab.com, buhead_mediaplanning@wondrlab.com, buhead_strategy@wondrlab.com
+  - Senior Management: manager1@wondrlab.com through manager3@wondrlab.com
 
 ### Dashboard
 - View key metrics and statistics

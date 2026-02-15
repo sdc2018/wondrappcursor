@@ -70,6 +70,7 @@ class ClientModel {
         status VARCHAR(20) NOT NULL,
         created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        is_deleted BOOLEAN DEFAULT FALSE,
         FOREIGN KEY (account_owner_id) REFERENCES users(id) ON DELETE RESTRICT
       )
     `;

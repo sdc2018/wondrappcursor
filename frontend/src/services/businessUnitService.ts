@@ -1,5 +1,4 @@
 import api from './api';
-import { AxiosResponse } from 'axios';
 
 export interface BusinessUnit {
   id: number;
@@ -16,14 +15,6 @@ export interface BusinessUnitInput {
   description?: string;
   status: string;
   owner_id?: number;
-}
-
-// Interface for standardized API responses
-interface ApiResponse<T> {
-  success: boolean;
-  message?: string;
-  data?: T;
-  businessUnit?: T; // For backward compatibility with older endpoints
 }
 
 const businessUnitService = {
