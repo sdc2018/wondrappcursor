@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Box, 
   Typography, 
@@ -47,31 +47,31 @@ const Notifications: React.FC = () => {
   const [deleteAllDialogOpen, setDeleteAllDialogOpen] = useState(false);
 
   // Fetch notifications based on current filter
-    const fetchNotifications = async () => {
+  const fetchNotifications = useCallback(async () => {
     setLoading(true);
     try {
       let data: Notification[];
-      
+
       if (filter === 'all') {
         data = await notificationService.getUserNotifications();
       } else {
         data = await notificationService.getUnreadNotifications();
       }
-      
+
       setNotifications(data);
-        setError(null);
-      } catch (err) {
-        console.error('Error fetching notifications:', err);
-        setError('Failed to load notifications. Please try again.');
-      } finally {
-        setLoading(false);
-      }
-    };
+      setError(null);
+    } catch (err) {
+      console.error('Error fetching notifications:', err);
+      setError('Failed to load notifications. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  }, [filter]);
 
   // Fetch notifications when component mounts or filter changes
   useEffect(() => {
     fetchNotifications();
-  }, [filter]);
+  }, [fetchNotifications]);
 
   const handleFilterClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);

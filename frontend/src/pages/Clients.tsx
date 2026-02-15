@@ -518,17 +518,17 @@ const Clients: React.FC = () => {
   };
 
   // Helper function to get account owner name
-  const getAccountOwnerName = (ownerId: number) => {
+  const getAccountOwnerName = useCallback((ownerId: number) => {
     const owner = accountOwners.find(o => o.id === ownerId);
     return owner ? owner.username : 'Unknown';
-  };
+  }, [accountOwners]);
 
   // Helper function to get service names for a client
-  const getServiceNames = (serviceIds: number[]) => {
+  const getServiceNames = useCallback((serviceIds: number[]) => {
     return services
       .filter(service => serviceIds.includes(service.id))
       .map(service => service.name);
-  };
+  }, [services]);
 
   // Filter and sort clients based on search term and sort configuration
   const filteredAndSortedClients = useMemo(() => {
@@ -578,7 +578,7 @@ const Clients: React.FC = () => {
       
       return direction === 'asc' ? comparison : -comparison;
     });
-  }, [clients, searchTerm, sortConfig, accountOwners, services]);
+  }, [clients, searchTerm, sortConfig, getAccountOwnerName, getServiceNames]);
   
   // Multi-select handlers (defined after filteredAndSortedClients to avoid dependency issues)
   const handleSelectAllClick = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
